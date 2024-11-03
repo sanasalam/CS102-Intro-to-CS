@@ -1,0 +1,37 @@
+Sana Salam
+
+The design of the software is simple: there are six classes and two interfaces. 
+The main method is in the CourseRegistrationSystem class.
+Two of the classes Student and Admin implement their respective interfaces: StudentInterface and AdminInterface. 
+Student and Admin also extend the User class. The user class holds the student and admin first name, last name, username, and password as well as the logout method that is the same for both Student and Admin.
+The student object holds an arraylist of the courses the instance of the student is registered in.
+The course object likewise holds an arraylist of the student names in the course as well as all given information from csv file.
+The Data class contains both the ArrayList of course objects and student objects in the system. 
+Data holds the readCSV method that is called upon the first admin or student to log in. 
+When a course is created or a student is added to the system, the object is added to the appropriate list in Data.
+Data also implements java.io.Serializable in order to store both ArrayLists after the first log in. 
+That way when the second person logs in, the lists reflect any changes made by the first person. 
+I used method overloading with the two constructors in Data that require different parameters. 
+Admin and Student inherit from User. 
+Polymorphism is used when Admin and Student take on the form of user in order to access member variables: first name, last name, etc. 
+
+There is one admin in the system:
+	Name: Anasse Bari
+	Username: admin
+	Password: admin001
+There are three students already in the system that were created by the admin
+First Student:
+	Natasha Quereshi
+	Username: student1
+	Password: student001
+Second Student:
+	Maria Islam
+	Username: student2
+	Password: student002
+Third Student:
+	Faiz Salam: student3
+	Username: student003
+When you do log in please note that usernames and passwords are case-sensitive.
+One course was deleted to test that admin method: CSCI-UA.101, section 1.
+There is minimal exception handling so please enter everything according to printed out instructions.
+The serialization code is inside the log out method, therefore do not exit the program after you go through the method, and instead make sure to click ‘L,’ when the screen prompts you so that any changes you made are there the next time you log in. 
